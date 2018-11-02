@@ -294,29 +294,45 @@
             <td align="right">
                 <label class="Validform_label">还箱点:</label>
             </td>
-            <td class="value" colspan="3">
+            <td class="value">
                 <input id="freturn" name="freturn" type="text" style="width: 300px" class="inputxt"  ignore="ignore"  value='${contianerPage.freturn}'/>
                 <span class="Validform_checktip"></span>
                 <label class="Validform_label" style="display: none;">还箱点</label>
             </td>
+            <td align="right">
+                <label class="Validform_label">磅差:</label>
+            </td>
+            <td class="value">
+                <input id="fbang" name="fbang" type="text" style="width: 150px" class="inputxt"  ignore="ignore" value="${contianerPage.fbang}"/>
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">磅差</label>
+            </td>
         </tr>
         <tr>
-        <td align="right">
-            <label class="Validform_label">到场时间:</label>
-        </td>
-        <td class="value">
-            <input id="fdao" name="fdao" type="text" style="width: 150px" class="Wdate"  ignore="ignore" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  value='<fmt:formatDate value='${contianerPage.fdao}' type="date" pattern="yyyy-MM-dd hh:mm:ss"/>'/>
-            <span class="Validform_checktip"></span>
-            <label class="Validform_label" style="display: none;">到场时间</label>
-        </td>
-        <td align="right">
-            <label class="Validform_label">离场时间:</label>
-        </td>
-        <td class="value" colspan="3">
-            <input id="fli" name="fli" type="text" style="width: 150px" class="Wdate"  ignore="ignore" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  value='<fmt:formatDate value='${contianerPage.fli}' type="date" pattern="yyyy-MM-dd hh:mm:ss"/>'/>
-            <span class="Validform_checktip"></span>
-            <label class="Validform_label" style="display: none;">离场时间</label>
-        </td>
+            <td align="right">
+                <label class="Validform_label">箱重:</label>
+            </td>
+            <td class="value">
+                <input id="fboxweight" name="fboxweight" type="text" style="width: 150px" class="inputxt"  ignore="ignore" value="${contianerPage.fboxweight}"/>
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">箱重</label>
+            </td>
+            <td align="right">
+                <label class="Validform_label">到场时间:</label>
+            </td>
+            <td class="value">
+                <input id="fdao" name="fdao" type="text" style="width: 150px" class="Wdate"  ignore="ignore" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  value='<fmt:formatDate value='${contianerPage.fdao}' type="date" pattern="yyyy-MM-dd hh:mm:ss"/>'/>
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">到场时间</label>
+            </td>
+            <td align="right">
+                <label class="Validform_label">离场时间:</label>
+            </td>
+            <td class="value" colspan="3">
+                <input id="fli" name="fli" type="text" style="width: 150px" class="Wdate"  ignore="ignore" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  value='<fmt:formatDate value='${contianerPage.fli}' type="date" pattern="yyyy-MM-dd hh:mm:ss"/>'/>
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">离场时间</label>
+            </td>
         </tr>
 
 

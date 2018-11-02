@@ -293,6 +293,14 @@
         </tr>
         <tr>
             <td align="right">
+                <label class="Validform_label">箱重:</label>
+            </td>
+            <td class="value">
+                <input id="fboxweight" name="fboxweight" type="text" style="width: 150px" class="inputxt"  ignore="ignore" />
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">箱重</label>
+            </td>
+            <td align="right">
                 <label class="Validform_label">到场时间:</label>
             </td>
             <td class="value">

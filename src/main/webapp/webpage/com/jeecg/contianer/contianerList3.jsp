@@ -3,8 +3,8 @@
 <t:base type="jquery,easyui,tools,DatePicker"></t:base>
 <div class="easyui-layout" fit="true">
   <div region="center" style="padding:0px;border:0px">
-  <t:datagrid name="contianerList3" fitColumns="true" title="集装箱" actionUrl="contianerController.do?datagrid1"
-              idField="id" fit="true" queryMode="group" onDblClick="submit">
+  <t:datagrid name="contianerList3" fitColumns="true" checkbox="true" title="集装箱" actionUrl="contianerController.do?datagrid1"
+              idField="id" fit="true" queryMode="group">
    <t:dgCol title="主键"  field="id"  hidden="true"  queryMode="single"></t:dgCol>
    <t:dgCol title="箱编号"  field="fbillno1"  queryMode="single"></t:dgCol>
    <t:dgCol title="委托单位"  field="fentrust"  queryMode="single"></t:dgCol>
@@ -26,6 +26,7 @@
    <t:dgCol title="等级"  field="fgrade"  queryMode="single"></t:dgCol>
    <t:dgCol title="业务时间"  field="fmakeboxtime" query="true" formatter="yyyy-MM-dd"  hidden="true"  queryMode="single"></t:dgCol>
    <t:dgCol title="主表主键"  field="fid"  hidden="true"  queryMode="single"></t:dgCol>
+   <t:dgToolBar title="排班" icon="icon-add" url="" funname="submit" width="1330" height="580"></t:dgToolBar>
   </t:datagrid>
   </div>
  </div>
@@ -58,9 +59,22 @@
 
 
     function submit() {
-        var contianerId = $('#contianerList3').datagrid('getSelected').id;
-        var entrustId = $('#contianerList3').datagrid('getSelected').fid;
-        detailwindow('车辆列表','paibanController.do?vehicle&contianerId='+contianerId+'&entrustId='+entrustId,800,500)
+        var rowsData = $('#contianerList3').datagrid('getSelections');
+        var contianerId;
+        var entrustId;
+        if(rowsData.length>2){
+            tip('最多可以选择2个箱子！');
+            return;
+        }
+        if(rowsData.length==1) {
+            contianerId = rowsData[0].id;
+            entrustId = rowsData[0].fid;
+        }
+        if(rowsData.length==2){
+            contianerId = rowsData[0].id+','+rowsData[1].id;
+            entrustId = rowsData[0].fid+','+rowsData[1].fid;
+        }
+        detailwindow('车辆列表', 'paibanController.do?vehicle&contianerId=' + contianerId + '&entrustId=' + entrustId, 800, 500);
     }
 
     //列表字段颜色 demo,逻辑判断函数

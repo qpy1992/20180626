@@ -99,6 +99,8 @@ public class PaibanController extends BaseController {
 	public ModelAndView vehicle(HttpServletRequest request) {
 		String contianerId = request.getParameter("contianerId");
 		String entrustId = request.getParameter("entrustId");
+		logger.info("箱子id："+contianerId);
+		logger.info("委托单id："+entrustId);
 		request.setAttribute("contianerId",contianerId);
 		request.setAttribute("entrustId",entrustId);
 		return new ModelAndView("com/jeecg/paiban/vehicleList");

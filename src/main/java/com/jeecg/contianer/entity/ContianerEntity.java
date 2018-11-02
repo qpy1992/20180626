@@ -207,6 +207,8 @@ public class ContianerEntity implements java.io.Serializable {
 	private java.lang.Double fother1;
 	/**序号*/
 	private java.lang.String fno;
+	/**箱重*/
+	private java.lang.Double fboxweight;
 
 	/**
 	 *方法: 取得java.lang.String
@@ -1215,5 +1217,14 @@ public class ContianerEntity implements java.io.Serializable {
 
 	public void setFno(String fno) {
 		this.fno = fno;
+	}
+
+	@Column(name="fboxweight",nullable = true)
+	public Double getFboxweight() {
+		return fboxweight;
+	}
+
+	public void setFboxweight(Double fboxweight) {
+		this.fboxweight = fboxweight;
 	}
 }

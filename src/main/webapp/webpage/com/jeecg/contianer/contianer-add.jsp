@@ -198,10 +198,18 @@
             <td align="right">
                 <label class="Validform_label">还箱点:</label>
             </td>
-            <td class="value" colspan="3">
+            <td class="value">
                 <input id="freturn" name="freturn" type="text" style="width: 300px" class="inputxt"  ignore="ignore" />
                 <span class="Validform_checktip"></span>
                 <label class="Validform_label" style="display: none;">还箱点</label>
+            </td>
+            <td align="right">
+                <label class="Validform_label">箱重:</label>
+            </td>
+            <td class="value">
+                <input id="fboxweight" name="fboxweight" type="text" style="width: 150px" class="inputxt"  ignore="ignore" />
+                <span class="Validform_checktip"></span>
+                <label class="Validform_label" style="display: none;">箱重</label>
             </td>
         </tr>
         <tr>
